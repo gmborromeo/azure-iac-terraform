@@ -24,13 +24,13 @@ A production-grade Azure infrastructure provisioned entirely via Terraform with 
 │                    Azure                                │
 │                                                         │
 │   Resource Group                                        │
-│   └── VNet (10.0.0.0/16)                               │
+│   └── VNet (10.0.0.0/16)                                │
 │       └── Subnet (10.0.1.0/24)                          │
 │           └── NSG (SSH inbound only)                    │
 │   └── Linux VM (Ubuntu 22.04)                           │
-│       └── NIC + Public IP (Standard SKU)               │
+│       └── NIC + Public IP (Standard SKU)                │
 │                                                         │
-│   Storage Account ── Terraform remote state (tfstate)  │
+│   Storage Account ── Terraform remote state (tfstate)   │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -63,16 +63,20 @@ A production-grade Azure infrastructure provisioned entirely via Terraform with 
 ## Screenshots
 
 **terraform plan output — resources to be created**
-![Terraform plan](docs/terraform-plan.png)
+
+<img width="1143" height="588" alt="image" src="https://github.com/user-attachments/assets/f86692ae-f69b-4add-9ea2-29588dbbb522" />
 
 **GitHub Actions — plan and apply steps passing**
-![GitHub Actions](docs/github-actions.png)
+
+<img width="1879" height="746" alt="image" src="https://github.com/user-attachments/assets/237e8fc2-2492-41ff-9e0d-76f0cec19721" />
 
 **Azure Portal — provisioned resource group**
-![Azure Portal](docs/azure-portal.png)
+
+<img width="1892" height="648" alt="image" src="https://github.com/user-attachments/assets/aedd7e19-1e19-4e13-9da3-84ec22eca82d" />
 
 **terraform workspace list**
-![Workspaces](docs/terraform-workspaces.png)
+
+<img width="540" height="86" alt="image" src="https://github.com/user-attachments/assets/77bc8c7b-3df3-4cd9-8cd7-9c6222ab5252" />
 
 ---
 
