@@ -44,11 +44,11 @@ jobs:
         run: terraform validate
 
       - name: Terraform plan
-        run: terraform plan -var-file=environments/dev.tfvars auto-approve
+        run: terraform plan -var-file=environments/dev.tfvars -auto-approve
         if: github.event_name == 'pull_request'
 
       - name: Terraform apply
-        run: terraform apply -var-file=environments/dev.tfvars auto-approve
+        run: terraform apply -var-file=environments/dev.tfvars -auto-approve
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
       - name: Upload plan as artifact
